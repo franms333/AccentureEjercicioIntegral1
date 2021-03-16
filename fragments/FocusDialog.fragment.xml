@@ -9,7 +9,7 @@
             <Text text="{i18n>columnProveedor}: {SelectedJSON>/productos/proveedor}"></Text>
             <Text text="{i18n>columnSize}: {SelectedJSON>/productos/size}"></Text>
             <Text text="{i18n>columnPeso}: {SelectedJSON>/productos/peso}kg"></Text>
-            <Text text="{i18n>columnValor}: {SelectedJSON>/productos/valor}"></Text>
+            <Text text="{i18n>columnValor}: {path: 'SelectedJSON>/productos/valor', formatter: '.formatter.formatValor'}€"></Text>
             <Button id="boton" text="{i18n>botonCerrar}" press="cerrarFragmento"/>
         </VBox>
     </Dialog>
