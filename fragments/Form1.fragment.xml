@@ -1,0 +1,40 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    
+        <Panel id="idPanelInputs">
+                <headerToolbar> <!--CREA UNA BARRA DE HERRAMIENTAS ARRIBA DE LA TABLA-->
+                <OverflowToolbar width="100%"> <!--CREA UNA SECCIÓN EN EL TOOLBAR PARA ALGUNA HERRAMIENTA-->
+                    <content>
+                    <!-- BARRA DE BÚSQUEDA -->
+                    <SearchField width="40%" placeholder="{i18n>searchFielfPlaceholder}"> <!--CREA UNA BARRA DE BÚSQUEDA EN EL TOOLBAR-->
+                    </SearchField>
+
+                    <!-- SELECT PARA PROVEEDORES -->
+                    <Select
+					forceSelection="false"
+					selectedKey="{/SelectedProduct}"
+					items="{
+						path: '/ProductCollection',
+						sorter: { path: 'Name' }
+					}">
+					<core:Item key="{ProductId}" text="{Name}" />
+				</Select>
+
+                <!-- INPUT PARA PAÍS -->
+                <Input
+                    id="paisInput"
+                    width="40%"
+                    type="Text"
+                    value="" />
+                <!-- BOTÓN PARA MOSTRAR INPUTS DE DATOS DE FECHA, PROVEEDOR Y PAÍS -->
+                <Button id="botonInputs" text="{i18n>botonIr}" press="mostrarInputs"/>
+                    </content>
+                </OverflowToolbar>
+                </headerToolbar>
+                <!-- LISTA DE PRODUCTOS -->
+                <!-- <Panel id="listaProductos">
+                </Panel> -->
+            </Panel>
+    
+</core:FragmentDefinition>

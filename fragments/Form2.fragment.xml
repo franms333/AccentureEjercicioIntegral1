@@ -1,0 +1,40 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    
+    <Panel id="idPanelBuscador">
+            <headerToolbar> <!--CREA UNA BARRA DE HERRAMIENTAS ARRIBA DE LA TABLA-->
+                <OverflowToolbar width="100%"> <!--CREA UNA SECCIÓN EN EL TOOLBAR PARA ALGUNA HERRAMIENTA-->
+                    <content>
+                    <!-- FECHA -->
+                    <Input
+                    width="30%"
+                    id="dateInput"
+                    value="{SearchJSON>/search/fecha}"
+                    type="Date"/>
+
+                    <!-- SELECT PARA PROVEEDORES -->
+                    <Select
+                    id="selectProveedor"
+                    width="30%"
+					forceSelection="false"
+					items="{
+						path: 'ProductosJSON>/productos'
+					}" selectedKey="SearchUser>/search/proveedor">
+					<core:Item key="{ProductosJSON>proveedor}" text="{ProductosJSON>proveedor}" />
+				</Select>
+
+                <!-- INPUT PARA PAÍS -->
+                <Input
+                    id="paisInput1"
+                    width="30%"
+                    type="Text"
+                    placeholder="{i18n>paisPlaceholder}"
+                    value="{SearchJSON>/search/pais}" />
+                <Button id="botonTabla" text="{i18n>botonIr}" press="mostrarTabla"/>
+                    </content>
+                </OverflowToolbar>
+                </headerToolbar>
+            </Panel>
+
+</core:FragmentDefinition>

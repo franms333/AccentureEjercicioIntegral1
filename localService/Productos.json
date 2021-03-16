@@ -1,0 +1,26 @@
+{
+    "productos": [
+        {
+            "producto": "PlayStation 4",
+            "proveedor": "Sony",
+            "size": "45cm",
+            "peso": 1.5,
+            "valor": 5000
+        },
+        {
+            "producto": "Xbox One",
+            "proveedor": "Microsoft",
+            "size": "50cm",
+            "peso": 2.5,
+            "valor": 3500
+        },
+        {
+            "producto": "Nitendo Switch",
+            "proveedor": "Nintendo",
+            "size": "14cm",
+            "peso": 0.90,
+            "valor": 8000
+        }
+    ]
+
+}

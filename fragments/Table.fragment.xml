@@ -1,0 +1,58 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Table id="idTablaProductos" items="{ProductosJSON>/productos}">
+                <headerToolbar> <!--CREA UNA BARRA DE HERRAMIENTAS ARRIBA DE LA TABLA-->
+                    <OverflowToolbar width="100%"> <!--CREA UNA SECCIÓN EN EL TOOLBAR PARA ALGUNA HERRAMIENTA-->
+                        <content>
+                            <SearchField width="40%" placeholder="{i18n>searchFielfPlaceholder}" liveChange="onSearch"> <!--CREA UNA BARRA DE BÚSQUEDA EN EL TOOLBAR-->
+                            </SearchField>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column >
+                            <Text text="{i18n>columnProduct}"></Text>
+                    </Column>
+                    <Column >
+                            <Text text="{i18n>columnProveedor}"></Text>
+                    </Column>
+                    <Column >
+                            <Text text="{i18n>columnSize}"></Text>
+                    </Column>
+                    <Column >
+                            <Text text="{i18n>columnPeso}"></Text>
+                    </Column>
+                    <Column >
+                            <Text text="{i18n>columnValor}"></Text>
+                    </Column>
+                </columns>
+                <items>
+                        <ColumnListItem 
+                        type="Active"
+				        press="elementOnFocus"> <!--CREA LAS FILAS-->
+                            <cells>
+                                <Text text="{ProductosJSON>producto}"></Text>
+                            </cells>
+                            <cells> 
+                                <Text text="{ProductosJSON>proveedor}"></Text>
+                            </cells>
+                            <cells> 
+                                <Text text="{ProductosJSON>size}"></Text>
+                            </cells>
+                            <cells> 
+                                <ObjectNumber
+                                    number="{ProductosJSON>peso}"
+                                    unit="kg"
+                                    state="{
+                                        path: 'ProductosJSON>peso',
+                                        formatter: '.formatter.formatColorPeso'
+                                    }" />
+                            </cells>
+                            <cells> 
+                                <Text text="{path: 'ProductosJSON>valor', formatter: '.formatter.formatValor'}€"></Text>
+                            </cells>
+                        </ColumnListItem>
+                </items>
+            </Table>
+</core:FragmentDefinition>

@@ -1,0 +1,16 @@
+<mvc:View controllerName="EjercicioIntegrador1.EjercicioIntegrador1.controller.EjercicioIntegrador1" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m">
+	
+	<Page id="page" title="{i18n>title}">
+		<content>
+            <!-- PANEL PARA EL PRIMER FORM -->
+            <core:Fragment fragmentName="EjercicioIntegrador1.EjercicioIntegrador1.fragments.Form1" type="XML"/>
+
+            <!-- TABLA PARA EL BUSCADOR -->
+            <core:Fragment fragmentName="EjercicioIntegrador1.EjercicioIntegrador1.fragments.Form2" type="XML"/>
+
+            <!-- TABLA PRODUCTOS -->
+            <core:Fragment fragmentName="EjercicioIntegrador1.EjercicioIntegrador1.fragments.Table" type="XML"/>
+        </content>
+	</Page>
+			
+</mvc:View>

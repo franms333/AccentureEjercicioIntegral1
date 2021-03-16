@@ -1,0 +1,14 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog
+        id="searchFragment"
+        title="{i18n>dialogInfo}">
+        <VBox xmlns="sap.m" wrap="Wrap" renderType="Bare">
+            <Text text="{i18n>textFecha}: {path: 'SearchJSON>/search/fecha', formatter: '.formatter.formatDate'}"></Text>
+            <Text text="{i18n>columnProveedor}: {SearchJSON>/search/proveedor}"></Text>
+            <Text text="{i18n>paisPlaceholder}: {SearchJSON>/search/pais}"></Text>
+            <Button id="button" text="{i18n>botonCerrar}" press="cerrarFragmento"/>
+        </VBox>
+    </Dialog>
+</core:FragmentDefinition>
